@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath app app:app
+web: gunicorn NeuralNetApp:app --log-file -
