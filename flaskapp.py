@@ -18,9 +18,11 @@ app = Flask(__name__)
 # Routing for your application.
 ###
 
-@app.route('/', methods=['POST'])
-def home():
+@app.route('/', methods=['POST','GET'])
+def home(): 
     """Render website's home page."""
+    if request.method == 'POST':
+        print request.
     return render_template('home.html')
 
 ###
@@ -32,7 +34,6 @@ def send_text_file(file_name):
     """Send your static text file."""
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
-
 
 @app.after_request
 def add_header(response):

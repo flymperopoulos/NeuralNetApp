@@ -10,13 +10,14 @@ $("#button").click( function()
     for (row=0; row<c.height; row++) {
       data[row] = new Array(c.width);
       for (col=0; col<c.width; col++) {
-        data[row][col] = pixels[row*col*4+3]/255.;
+        data[row][col] = Math.round(pixels[row*col*4+3]/255.);
       }
     }
-    var finalData = JSON.stringify(data);
 
-    $.post('/', finalData, success = function(responce){
-	console.log(responce);
+    // var finalData = JSON.stringify((data));
+    // console.log(finalData);
+
+    $.post('/', JSON.stringify({'data':data}), success = function(response){
+		console.log(response);
 });
 });
-
