@@ -65,28 +65,11 @@
   </script>
 
   <!-- <div id="button" data-role="button">Submit</div>  -->
-<button id = "button" name="button">Click me</button>
+  <button id = "button" name="button">Submit</button>
 
-  <script>
-        $("#button").click( function()
-           {
-            var c = document.getElementById('simple_sketch')
-            var ctx = c.getContext('2d');
+  <script src = "/static/js/readImage.js"></script>
+  <script src = "/static/js/ajaxPost.js"></script>
 
-            var pixels = ctx.getImageData(0,0, c.width, c.height).data;
-            console.log(pixels);
-            var n_pixels = c.width*c.height;
-            var data = new Array(c.height);
-            for (row=0; row<c.height; row++) {
-              data[row] = new Array(c.width);
-              for (col=0; col<c.width; col++) {
-                data[row][col] = pixels[row*col*4+3]/255.;
-              }
-            }
-
-            console.log(data);
-        });
-  </script>
 
   <!-- Prompt IE < 8 users to install Chrome Frame.  -->
   <!--[if lt IE 8 ]>
