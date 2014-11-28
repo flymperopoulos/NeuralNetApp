@@ -22,7 +22,7 @@ app = Flask(__name__)
 def home(): 
     """Render website's home page."""
     if request.method == 'POST':
-        print request.
+        print request.form.get('data')
     return render_template('home.html')
 
 ###

@@ -17,7 +17,7 @@ $("#button").click( function()
     // var finalData = JSON.stringify((data));
     // console.log(finalData);
 
-    $.post('/', JSON.stringify({'data':data}), success = function(response){
+    $.post('/', {data: JSON.stringify(data)}, success = function(response){
 		console.log(response);
 });
 });
