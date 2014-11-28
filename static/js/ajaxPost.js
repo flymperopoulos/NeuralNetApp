@@ -1,3 +1,3 @@
-$.post('/', data = JSON.stringify(data), success = function(){
-	console.log(data);
-})
+// $.post('/', finalData, success = function(responce){
+// 	console.log(responce);
+// })

@@ -13,4 +13,10 @@ $("#button").click( function()
         data[row][col] = pixels[row*col*4+3]/255.;
       }
     }
+    var finalData = JSON.stringify(data);
+    
+    $.post('/', finalData, success = function(responce){
+	console.log(responce);
+})
 });
+
