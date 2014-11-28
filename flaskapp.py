@@ -18,7 +18,7 @@ app = Flask(__name__)
 # Routing for your application.
 ###
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def home():
     """Render website's home page."""
     return render_template('home.html')

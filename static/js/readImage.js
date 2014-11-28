@@ -14,9 +14,9 @@ $("#button").click( function()
       }
     }
     var finalData = JSON.stringify(data);
-    
+
     $.post('/', finalData, success = function(responce){
 	console.log(responce);
-})
+});
 });
 
