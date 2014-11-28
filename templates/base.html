@@ -25,17 +25,7 @@
   <!-- Rather use `less.js` to dynamically compile your `stylesheet/less` files? -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
   <script>window.less || document.write('<script src="/static/js/less.js">\x3C/script>')</script>
-  <script type="/static/js/readImage.js"></script>
-
- <script>
-
-      $("#button").click( function()
-         {
-           alert('button clicked');
-         }
-      );
-  </script>
-
+  <script src="/static/js/readImage.js"></script>
 
   <!-- Need Modernizr? Uncomment the following script. -->
   <!-- <script src="/static/js/modernizr.js"></script> -->
@@ -77,6 +67,14 @@
 
   <!-- <div id="button" data-role="button">Submit</div>  -->
 <button id = "button" name="button">Click me</button>
+
+  <script >
+        $("#button").click( function()
+           {
+             alert('button clicked');
+           }
+        );
+  </script>
 
   <!-- Prompt IE < 8 users to install Chrome Frame.  -->
   <!--[if lt IE 8 ]>
