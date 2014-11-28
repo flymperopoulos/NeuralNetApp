@@ -18,11 +18,24 @@
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
   <link rel="stylesheet/less" href="/static/css/main.less">
+  <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
   {% block css %}{% endblock %}
 
   <!-- Rather use `less.js` to dynamically compile your `stylesheet/less` files? -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
   <script>window.less || document.write('<script src="/static/js/less.js">\x3C/script>')</script>
+  <script type="/static/js/readImage.js"></script>
+
+ <script>
+
+      $("#button").click( function()
+         {
+           alert('button clicked');
+         }
+      );
+  </script>
+
 
   <!-- Need Modernizr? Uncomment the following script. -->
   <!-- <script src="/static/js/modernizr.js"></script> -->
@@ -43,7 +56,6 @@
     {% include "footer.html" %}
   </footer>
 
-
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
@@ -63,6 +75,8 @@
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
 
+  <!-- <div id="button" data-role="button">Submit</div>  -->
+<button name="button">Click me</button>
 
   <!-- Prompt IE < 8 users to install Chrome Frame.  -->
   <!--[if lt IE 8 ]>
