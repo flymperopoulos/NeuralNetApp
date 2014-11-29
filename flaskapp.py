@@ -21,7 +21,7 @@ def home():
         img = np.array(arr)
 
         # print img.shape
-        # name = 'test'
+        name = 'filippos'
         # print type(img)
         np.save('smarterboard-images/' + name, img)
         # imsave(img, 'smarterboard-images/' + name)
