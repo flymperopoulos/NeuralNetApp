@@ -19,5 +19,5 @@ $("#button").click( function()
 
     $.post('/', {data: JSON.stringify(data)}, success = function(response){
 		console.log(response);
-});
+	});
 });
