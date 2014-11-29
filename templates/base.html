@@ -1,54 +1,58 @@
 <!doctype html>
 <html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-  <title>{% block title %}Neural Circuits{% endblock %}</title>
+    <title>{% block title %}Neural Circuits{% endblock %}</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="/static/sign.pngg">
-  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
-  <link rel="stylesheet/less" href="/static/css/main.less">
-  <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/static/img/sign.pngg">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet/less" href="/static/css/main.less">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
 
-  {% block css %}{% endblock %}
+    {% block css %}{% endblock %}
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
-  <script>window.less || document.write('<script src="/static/js/less.js">\x3C/script>')</script>
-</head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
+    <script>window.less || document.write('<script src="/static/js/less.js">\x3C/script>')</script>
+  </head>
 
-<body>
+  <body>
 
-  <header>
-    {% include "header.html" %}
-  </header>
+    <header>
+      {% include "header.html" %}
+    </header>
 
-  <div id="main" role="main">
-    {% block main %}{% endblock %}
-  </div>
+    <div id="main" role="main">
+      {% block main %}{% endblock %}
+    </div>
 
-  <footer>
-    {% include "footer.html" %}
-  </footer>
+    <footer>
+      {% include "footer.html" %}
+    </footer>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/static/js/libs/jquery.js">\x3C/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery.js">\x3C/script>')</script>
 
-  {% block js %}{% endblock %}
+    {% block js %}{% endblock %}
 
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-  <div>
-    <button id = "button" name="button">Submit</button>
-  </div>
-  <script src = "/static/js/readImage.js"></script>
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
 
-</body>
+    <div>
+      <button id = "button" name="button">Submit</button>
+      <!-- <button type="button" class="btn btn-primary btn-lg btn-adjust">Submit</button> -->
+      <!-- <button type="submit" class="btn btn-sm">Send Message</button> -->
+    </div>
+
+    <script src = "/static/js/readImage.js"></script>
+
+  </body>
 </html>

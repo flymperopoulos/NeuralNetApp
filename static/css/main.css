@@ -1,5 +1,5 @@
 .button {
-  background: #3498db;
+  background: #5bc0de;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
   background-image: -ms-linear-gradient(top, #3498db, #2980b9);
@@ -8,9 +8,9 @@
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
+  font-family: 'Helvetica Neue',sans-serif;
+  color:  #5bc0de;
+  font-size: 60px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
@@ -35,4 +35,14 @@ canvas {
 
 div{
   text-align: center;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
 }
