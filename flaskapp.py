@@ -35,11 +35,9 @@ def home():
         print bool_img
         
         # print img.shape
-<<<<<<< HEAD
-        name = 'filippos'
-=======
+
         name = 'bool'
->>>>>>> f39674d2423c1d937dfde1be0cc82e96bf7f3fbc
+        
         # print type(img)
         np.save('smarterboard-images/' + name, boolimg)
         # imsave(img, 'smarterboard-images/' + name)
