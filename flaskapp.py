@@ -6,11 +6,24 @@ import numpy as np
 from skimage.io import imsave
 from skimage.transform import resize
 
+
 app = Flask(__name__)
 
 # app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
 
+def unit_scale(x, eps=1e-8):
+    """ Scales all values in the ndarray ndar to be between 0 and 1 """
+    x = x.copy()
+    x -= x.min()
+    x *= 1.0 / (x.max() + eps)
+    return x
 
+def get_boolean(img):
+    img = img.astype('float32')
+    img = unit_scale(img)
+    img = resize(img, (100,100))
+    img = img > 0
+    return img
 
 @app.route('/', methods=['POST','GET'])
 def home(): 
@@ -18,12 +31,17 @@ def home():
     if request.method == 'POST':
         data = request.form.get('data')
         arr = json.loads(data)
-        img = np.array(arr)
-
+        bool_img = get_boolean(np.array(arr))
+        print bool_img
+        
         # print img.shape
+<<<<<<< HEAD
         name = 'filippos'
+=======
+        name = 'bool'
+>>>>>>> f39674d2423c1d937dfde1be0cc82e96bf7f3fbc
         # print type(img)
-        np.save('smarterboard-images/' + name, img)
+        np.save('smarterboard-images/' + name, boolimg)
         # imsave(img, 'smarterboard-images/' + name)
 
 
