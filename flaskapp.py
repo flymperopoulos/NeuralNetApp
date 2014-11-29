@@ -1,16 +1,32 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for
 import csv
+import json
+import numpy as np
+from skimage.io import imsave
+from skimage.transform import resize
 
 app = Flask(__name__)
 
 # app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'this_should_be_configured')
 
+
+
 @app.route('/', methods=['POST','GET'])
 def home(): 
     """Render website's home page."""
     if request.method == 'POST':
-        print request.form.get('data')
+        data = request.form.get('data')
+        arr = json.loads(data)
+        img = np.array(arr)
+
+        # print img.shape
+        # name = 'test'
+        # print type(img)
+        np.save('smarterboard-images/' + name, img)
+        # imsave(img, 'smarterboard-images/' + name)
+
+
     return render_template('home.html')
 
 @app.route('/<file_name>.txt')
